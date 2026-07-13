@@ -1,16 +1,11 @@
 
-
--- ==========================================
--- 1. Create Database
--- =========================================
+-- 1. Create Database;
 
 CREATE DATABASE sql_project_1;
 
 USE sql_project_1;
 
--- ==========================================
 -- 2. Create Table
--- ==========================================
 
 CREATE TABLE retail_sales (
     transactions_id INT PRIMARY KEY,
@@ -26,16 +21,13 @@ CREATE TABLE retail_sales (
     total_sale FLOAT
 );
 
--- ==========================================
--- 3. Rename Column (Only if imported CSV has BOM)
--- ==========================================
+-- 3. Rename Column 
 
 ALTER TABLE retail_sales
 RENAME COLUMN `ï»¿transactions_id` TO transactions_id;
 
--- ==========================================
+
 -- 4. Data Cleaning
--- ==========================================
 
 -- Check NULL Values
 
@@ -52,9 +44,9 @@ WHERE sale_date IS NULL
    OR cogs IS NULL
    OR total_sale IS NULL;
 
--- ==========================================
+
 -- 5. Data Exploration
--- ==========================================
+
 
 -- Total Number of Sales
 
@@ -71,9 +63,8 @@ FROM retail_sales;
 SELECT DISTINCT category
 FROM retail_sales;
 
--- ==========================================
+
 -- 6. Business Problems & Solutions
--- ==========================================
 
 -- Q1. Retrieve all sales made on 2022-11-05
 
