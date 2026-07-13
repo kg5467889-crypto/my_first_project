@@ -1,4 +1,4 @@
-## 01 Altering Table
+-- 01 Altering Table
 
 ```sql
 ALTER TABLE retails_sales
